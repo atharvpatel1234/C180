@@ -22,7 +22,7 @@ function get_coordinates() {
 
 function render_elements() {
     $.ajax({
-        url:"https://api.mapbox.com/directions/v5/mapbox/driving/$%7Bcoordinates.source_lon%7D%2C$%7Bcoordinates.source_lat%7D%3B$%7Bcoordinates.destination_lon%7D%2C$%7Bcoordinates.destination_lat%7D?alternatives=true&geometries=polyline&steps=true&access_token=pk.eyJ1IjoiYXBvb3J2ZWxvdXMiLCJhIjoiY2ttZnlyMDgzMzlwNTJ4a240cmEzcG0xNyJ9.-nSyL0Gy2nifDibXJg4fTA",
+        url:"https://api.mapbox.com/directions/v5/mapbox/driving/${coordinates.source_lon}%2C${coordinates.source_lat}%3B${coordinates.destination_lon}%2C${coordinates.destination_lat}?alternatives=true&geometries=polyline&steps=true&access_token=pk.eyJ1IjoiYXBvb3J2ZWxvdXMiLCJhIjoiY2ttZnlyMDgzMzlwNTJ4a240cmEzcG0xNyJ9.-nSyL0Gy2nifDibXJg4fTA",
         type:"get",
         success:function(response){
             console.log(response)
